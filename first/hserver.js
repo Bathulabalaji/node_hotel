@@ -10,25 +10,13 @@ app.use(express.json());
 
 mongoose.connect('mongodb://127.0.0.1:27017/hotel');
 
-
-
-
+//get from root page
 app.get('/',(req,res)=>{
     console.log("homepage opened");
     res.send("Welcome to Home Page");
 })
 
-
-
-
-
-
-
-
-
-
-
-
+//importing routes
 const personRoutes=require("./routes/personRoutes");
 app.use('/',personRoutes);
 
