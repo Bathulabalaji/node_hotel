@@ -14,7 +14,9 @@ router.post('/person',async(req,res)=>{
         age:req.body.age,
         address:req.body.address,
         work:req.body.work,
-        salary:req.body.salary
+        salary:req.body.salary,
+        username:req.body.username,
+        password:req.body.password
     });
 
     console.log(data);
