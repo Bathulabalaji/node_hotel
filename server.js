@@ -20,7 +20,7 @@ app.use(passport.initialize());
 const mongoURL=process.env.DB_URL;
 const mongoURLlocal=process.env.DB_URL_LOCAL;
 //const mongoURLlocal='mongodb://127.0.0.1:27017/hotel'
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURLlocal);
 
 
 //middleware function
@@ -42,7 +42,7 @@ app.get('/', function (req,res){
 })
 
 
-app.use("/",localAuthMiddleware,personRoutes);
+app.use("/",personRoutes);
 app.use("/",menuRoutes);
 
 const port=process.env.PORT || 3000;
